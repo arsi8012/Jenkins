@@ -1,0 +1,17 @@
+{
+  "name": "cypress2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:spec1": "cypress run --spec 'cypress/integration/bookTickets.spec.js' --record --key bb44b6ed-456e-406b-a9f9-14ab65441d63",
+    "cy:spec2": "cypress run --spec 'cypress/integration/newHall.spec.js' --record --key bb44b6ed-456e-406b-a9f9-14ab65441d63",
+    "cy:parallel": "npm run cy:spec1 -- --browser chrome --group Spec1 --ci-build-id 14 & npm run cy:spec2 -- --browser chrome --group Spec2 --ci-build-id 14"
+  },
+  "author": "AOA",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "cypress": "^9.5.1"
+  }
+}
